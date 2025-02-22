@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://kvwfjwgkevic"]
+
+[ext_resource type="PackedScene" uid="uid://dfbkuodyo5pd0" path="res://3D models/3D models/source/dog.glb" id="1_1bys8"]
+[ext_resource type="PackedScene" uid="uid://c2pr7dj5mihyj" path="res://3D models/3D models/scene.gltf" id="2_iu5ep"]
+[ext_resource type="PackedScene" uid="uid://b51m7jpx0yp7" path="res://3D models/3D models/source/Sketchfab_2020_04_14_23_35_39.fbx" id="3_i5pbe"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="dog2" parent="." instance=ExtResource("1_1bys8")]
+transform = Transform3D(-0.987775, -0.0958792, 0.122914, -0.123888, 0.961408, -0.245654, -0.0946176, -0.257878, -0.961533, 1.36706, 0, -0.213211)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("2_iu5ep")]
+transform = Transform3D(-0.761096, 0.0476318, -0.646888, 0.0756784, 0.99701, -0.0156274, 0.644209, -0.0608493, -0.762425, -4.55002, 0, -3.13256)
+
+[node name="Sketchfab_Scene" parent="Sketchfab_Scene" instance=ExtResource("2_iu5ep")]
+transform = Transform3D(0.379104, 0.0240839, -0.925041, -0.00646253, 0.999706, 0.0233792, 0.925332, -0.00288505, 0.379148, -11.6685, -0.773178, -4.97353)
+
+[node name="Sketchfab_Scene" parent="Sketchfab_Scene/Sketchfab_Scene" instance=ExtResource("2_iu5ep")]
+transform = Transform3D(0.379104, 0.0240839, -0.925041, -0.00646253, 0.999706, 0.0233792, 0.925332, -0.00288505, 0.379148, -11.6685, -0.773178, -4.97353)
+
+[node name="Sketchfab_Scene" parent="Sketchfab_Scene/Sketchfab_Scene/Sketchfab_Scene" instance=ExtResource("2_iu5ep")]
+transform = Transform3D(0.379104, 0.0240839, -0.925041, -0.00646253, 0.999706, 0.0233792, 0.925332, -0.00288505, 0.379148, -11.6685, -0.773178, -4.97353)
+
+[node name="Sketchfab_2020_04_14_23_35_39" parent="." instance=ExtResource("3_i5pbe")]
+transform = Transform3D(-0.192685, -0.03078, -0.043876, -0.0142925, 0.18731, -0.0686353, 0.051655, -0.0629895, -0.182658, -0.406239, -5.14882, 2.53507)
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("2_iu5ep")]
+transform = Transform3D(-0.250262, 0.0210188, -0.96795, 0.127018, 0.991836, -0.011303, 0.95981, -0.125776, -0.250889, -18.036, -3.16775, -0.00430584)
